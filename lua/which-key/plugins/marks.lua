@@ -42,6 +42,11 @@ function M.run(_trigger, _mode, buf)
     if key == "<" then
       key = "<lt>"
     end
+    if key == "'" then
+      key = "`"
+    elseif key == "`" then
+      key = "'"
+    end
     local lnum = mark.pos[2]
 
     local line
